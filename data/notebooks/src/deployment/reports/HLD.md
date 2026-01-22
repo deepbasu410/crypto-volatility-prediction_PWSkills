@@ -40,7 +40,6 @@ to predict future volatility levels.
 
 ## 4. Pipeline Architecture
 
-## Pipeline Architecture
 
 The project follows a structured machine learning pipeline to ensure reliable
 and scalable cryptocurrency volatility prediction.

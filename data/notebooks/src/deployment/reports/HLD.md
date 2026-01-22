@@ -40,14 +40,42 @@ to predict future volatility levels.
 
 ## 4. Pipeline Architecture
 
-Raw Dataset
-↓
-Data Preprocessing
-↓
-Feature Engineering
-↓
-Model Training
-↓
-Model Evaluation
-↓
-Volatility Prediction
+## Pipeline Architecture
+
+The project follows a structured machine learning pipeline to ensure reliable
+and scalable cryptocurrency volatility prediction.
+
+### Step 1: Data Ingestion
+- Historical cryptocurrency market data is loaded from a CSV file.
+- Data includes OHLC prices, trading volume, and market capitalization.
+
+### Step 2: Data Preprocessing
+- Missing values are handled using forward fill.
+- Data consistency is ensured across numerical features.
+- Cleaned data is prepared for feature engineering.
+
+### Step 3: Feature Engineering
+- Log returns are calculated from closing prices.
+- Rolling volatility (7-day) is computed as the target variable.
+- Liquidity ratio (Volume / Market Capitalization) is generated.
+
+### Step 4: Exploratory Data Analysis (EDA)
+- Volatility trends are visualized over time.
+- Feature correlations are analyzed.
+- Distribution of returns and volatility is examined.
+
+### Step 5: Model Training
+- Dataset is split into training and testing sets.
+- Numerical features are scaled using StandardScaler.
+- Random Forest Regressor is trained on engineered features.
+
+### Step 6: Model Evaluation
+- Model performance is evaluated using:
+  - Root Mean Squared Error (RMSE)
+  - R² Score
+
+### Step 7: Deployment
+- The trained model is deployed locally using Streamlit.
+- Users can upload a dataset and train the model interactively.
+
+---

@@ -40,3 +40,14 @@ to predict future volatility levels.
 
 ## 4. Pipeline Architecture
 
+Raw Dataset
+↓
+Data Preprocessing
+↓
+Feature Engineering
+↓
+Model Training
+↓
+Model Evaluation
+↓
+Volatility Prediction
